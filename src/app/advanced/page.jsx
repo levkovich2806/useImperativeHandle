@@ -27,7 +27,7 @@ const AnimationWithSound = memo(
         );
 
         const updateStyles = (action) => {
-            if (!targetDivRef.current) return;
+            if (typeof window === 'undefined' || !targetDivRef.current) return;
             if (action === "start") {
                 targetDivRef.current.style.backgroundColor = "green";
                 targetDivRef.current.style.color = "white";
