@@ -23,8 +23,8 @@ export default function App() {
     return (
         <div>
             <CustomInput ref={inputRef}/>
-            <button onClick={inputRef.current.focus}>Focus</button>
-            <button onClick={inputRef.current.clear}>Clear</button>
+            <button onClick={inputRef.current?.focus}>Focus</button>
+            <button onClick={inputRef.current?.clear}>Clear</button>
         </div>
     );
 }
