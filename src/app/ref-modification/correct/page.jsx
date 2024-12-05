@@ -25,7 +25,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Incorrect useImperativeHandle Example</h1>
+            <h1>Ref modification - correct</h1>
             <ChildComponent ref={childRef}/>
             <button onClick={handleClick}>Increment</button>
         </div>

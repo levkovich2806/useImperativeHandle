@@ -33,7 +33,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Demo: Missing Dependencies in useImperativeHandle</h1>
+            <h1>Deps are empty - correct</h1>
             <ChildComponent ref={childRef}/>
             <button onClick={handleChildClick}>Increment Child Count</button>
             <button onClick={handleParentClick}>Re-render Parent ({parentCount})</button>

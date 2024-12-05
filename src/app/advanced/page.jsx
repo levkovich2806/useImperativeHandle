@@ -18,7 +18,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Lottie Animation with Sound</h1>
+            <h1>Advanced - Lottie Animation with Sound</h1>
             <AnimationWithSound ref={animationRef}/>
             <button onClick={handleStart}>Start Animation</button>
             <button onClick={handleStop}>Stop Animation</button>

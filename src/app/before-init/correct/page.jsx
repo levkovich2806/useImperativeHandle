@@ -25,7 +25,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Incorrect Initialization Example</h1>
+            <h1>Before init - correct</h1>
             <div>
                 <button onClick={() => setVisible(prevVisible => !prevVisible)}>Toggle visible</button>
             </div>

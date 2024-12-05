@@ -22,6 +22,7 @@ export default function App() {
 
     return (
         <div>
+            <h1>Base without useImperativeHandle</h1>
             <CustomInput ref={inputRef}/>
             <button onClick={() => inputRef.current?.focus()}>Focus</button>
             <button onClick={() => inputRef.current?.clear()}>Clear</button>

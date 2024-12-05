@@ -41,3 +41,15 @@ a {
     color-scheme: dark;
   }
 }
+
+h1 {
+  padding: 30px 0;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration-color: aqua;
+}

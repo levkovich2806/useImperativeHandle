@@ -9,7 +9,7 @@ const CustomInput = forwardRef((props, ref) => {
 
 export default function App() {
     const inputRef = useRef();
- 
+
     const handleFocus = () => {
         inputRef.current.focus(); // Directly controlling the input
     };
@@ -20,6 +20,7 @@ export default function App() {
 
     return (
         <div>
+            <h1>Base without useImperativeHandle</h1>
             <CustomInput ref={inputRef}/>
             <button onClick={handleFocus}>Focus</button>
             <button onClick={handleClear}>Clear</button>

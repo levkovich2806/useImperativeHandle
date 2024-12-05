@@ -18,7 +18,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Controlled Lottie Animation</h1>
+            <h1>State animation sync - wrong</h1>
             <Animation ref={animationRef}/>
             <button onClick={handleStart}>Start Animation</button>
             <button onClick={handleStop}>Stop Animation</button>

@@ -6,16 +6,17 @@ const ChildComponent = forwardRef((props, ref) => {
     const [count, setCount] = useState(0);
 
     const increment = useCallback(() => {
-        console.log("Current count in increment:", count);
-        setCount(count + 1);
+        console.log("Current count in increment:", count); // Shows old value
+        setCount(count + 1); // Are using the old value of count
     }, [count]);
 
     useImperativeHandle(
         ref,
         () => ({
-            increment,
+            increment, // Link to the old function is used
         }),
-        [increment] // Array of dependencies include increment function
+        [] // Array of dependencies do not include increment function
+
     );
 
     return (
@@ -37,7 +38,7 @@ export default function App() {
 
     return (
         <div>
-            <h1>Check Imperative Handle Dependency Issue</h1>
+            <h1>Deps are not correct - wrong</h1>
             <ChildComponent ref={childRef}/>
             <button onClick={() => childRef.current.increment()}>
                 Increment from Parent
