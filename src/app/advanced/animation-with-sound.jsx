@@ -1,6 +1,7 @@
 import React, {forwardRef, memo, useImperativeHandle, useRef, useState} from "react";
 import {Player} from '@lottiefiles/react-lottie-player'
 import animation from "./animation.json";
+import styles from './page.module.css'
 
 export default memo(
     forwardRef((props, ref) => {
@@ -27,11 +28,17 @@ export default memo(
         const updateStyles = (action) => {
             if (typeof window === 'undefined' || !targetDivRef.current) return;
             if (action === "start") {
-                targetDivRef.current.style.backgroundColor = "green";
-                targetDivRef.current.style.color = "white";
+                if (targetDivRef.current.classList.contains(styles.stop)) {
+                    targetDivRef.current.classList.remove(styles.stop);
+                }
+
+                targetDivRef.current.classList.add(styles.start);
             } else if (action === "stop") {
-                targetDivRef.current.style.backgroundColor = "red";
-                targetDivRef.current.style.color = "black";
+                if (targetDivRef.current.classList.contains(styles.start)) {
+                    targetDivRef.current.classList.remove(styles.start);
+                }
+
+                targetDivRef.current.classList.add(styles.stop);
             }
         };
 

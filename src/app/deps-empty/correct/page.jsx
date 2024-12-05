@@ -4,7 +4,7 @@ import React, {useState, forwardRef, useImperativeHandle, useRef} from "react";
 
 const ChildComponent = forwardRef((props, ref) => {
     const [count, setCount] = useState(0);
-    
+
     useImperativeHandle(ref, () => {
         // There is might be a difficult task
         console.log("useImperativeHandle calculated again");
@@ -12,7 +12,7 @@ const ChildComponent = forwardRef((props, ref) => {
         return {
             increment: () => setCount((prev) => prev + 1),
         };
-    }, []); // Array of dependencies is incorrect
+    }, []); // Array of dependencies is correct
 
     return <div>Count: {count}</div>;
 });

@@ -18,7 +18,7 @@ export default function App() {
 
     const increment = useCallback(() => {
         // Call with checking if the ref is initialized and increment method exists
-        if (childRef.current && childRef.current.increment) {
+        if (childRef.current?.increment) {
             childRef.current.increment()
         }
     }, [])
